@@ -1,4 +1,4 @@
-import AuthenticationPage from "./pages/AuthenticationPage";
+import AuthenticationPage from "pages/AuthenticationPage";
 
 function App() {
   return (
