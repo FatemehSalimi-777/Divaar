@@ -2,7 +2,7 @@ import { useState } from "react";
 import SendOtpForm from "components/templates/SendOtpForm";
 import CheckOtpForm from "components/templates/CheckOtpForm";
 
-function AuthenticationPage() {
+function AuthPage() {
   const [step, setStep] = useState(1);
   const [mobile, setMobile] = useState("");
   const [code, setCode] = useState("");
@@ -23,4 +23,4 @@ function AuthenticationPage() {
   );
 }
 
-export default AuthenticationPage;
+export default AuthPage;

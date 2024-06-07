@@ -6,3 +6,10 @@ export const setCookie = (tokens) => {
     30 * 24 * 60 * 60
   }`;
 };
+
+export const getCookie = (cookieName) => {
+  return document.cookie
+    .split(";")
+    .find((token) => token.trim().split("=")[0] === cookieName)
+    ?.split("=")[1];
+};
