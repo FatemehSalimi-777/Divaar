@@ -1,0 +1,43 @@
+.list {
+  margin: 50px 0 70px;
+}
+
+.list div {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid #eaeaea;
+  border-radius: 5px;
+}
+
+.list h5 {
+  margin-right: 20px;
+  font-size: 0.9rem;
+  width: 100px;
+}
+
+.list .rightSide {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.list .leftSide{
+    display: flex;
+flex-direction: row-reverse;
+}
+.list .leftSide button {
+  color: #a62626;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.list .leftSide p {
+  width: 100%;
+  text-align: left;
+  color: #a62626;
+}
