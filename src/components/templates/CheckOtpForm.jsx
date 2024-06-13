@@ -4,6 +4,8 @@ import { checkOtp } from "services/auth";
 import { getProfile } from "services/user";
 import { setCookie } from "utils/cookie";
 import styles from "./CheckOtpForm.module.css";
+import { p2e } from "src/utils/numbers";
+import { e2p } from "src/utils/numbers";
 
 function CheckOtpForm({ code, setCode, mobile, setStep }) {
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
     event.preventDefault();
     if (code.length !== 5) return;
 
-    const { response, error } = await checkOtp(mobile, code);
+    const { response, error } = await checkOtp(p2e(mobile), p2e(code));
 
     if (response) {
       setCookie(response.data);
@@ -35,7 +37,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
         type="text"
         id="input"
         placeholder="کد تایید..."
-        value={code}
+        value={e2p(code)}
         onChange={(e) => setCode(e.target.value)}
       />
       <button type="submit">ورود</button>
