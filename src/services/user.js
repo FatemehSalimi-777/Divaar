@@ -6,3 +6,7 @@ export const getProfile = () =>
 export const getPosts = () => {
   api.get("post/my").then((res) => res);
 };
+
+export const getAllPosts = () => {
+  api.get("");
+};

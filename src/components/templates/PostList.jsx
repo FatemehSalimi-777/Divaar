@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "src/services/user";
 import { sp } from "src/utils/numbers";
 import Loader from "../modules/Loader";
-import styles from "./PostList.module.css";
+import * as styles from "./PostList.Module.css";
 
 function PostList() {
   const { data, isLoading } = useQuery(["my-post-list"], getPosts);
