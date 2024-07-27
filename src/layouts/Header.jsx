@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
+import DropDown from "src/components/templates/DropDown";
 
 function Header() {
   return (
@@ -14,13 +15,16 @@ function Header() {
         </span>
       </div>
       <div>
-        <Link to="/auth">
+      <DropDown />
+        {/* <Link to="/auth">
           <span>
             <img src="profile.svg" alt="svg" />
             <p>دیوار من</p>
           </span>
+        </Link> */}
+        <Link className={styles.button} to="/dashboard">
+          ثبت آگهی
         </Link>
-        <Link className={styles.button} to="/dashboard">ثبت آگهی</Link>
       </div>
     </header>
   );

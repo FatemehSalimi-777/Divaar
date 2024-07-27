@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "src/services/user";
 import { sp } from "src/utils/numbers";
 import Loader from "../modules/Loader";
-import * as styles from "./PostList.Module.css";
+import styles from "./PostList.module.css";
 
 function PostList() {
-  const { data, isLoading } = useQuery(["my-post-list"], getPosts);
-  // console.log({ data });
+  const { data, isLoading, error } = useQuery(["my-post-list"], getPosts);
+  // console.log({ data, isLoading, error });
 
   return (
     <div className={styles.list}>
@@ -19,8 +19,8 @@ function PostList() {
             <div className={styles.post} key={post._id}>
               <img src={`${import.meta.env.VITE_BASE_URL}${post.images[0]}`} />
               <div>
-                <p>{post.options.title}</p>
-                <span>{post.options.content}</span>
+                <p>{post.options?.title}</p>
+                <span>{post.options?.content}</span>
               </div>
               <div className={styles.price}>
                 <p>{new Date(post.createdAt).toLocaleDateString("fa-IR")}</p>

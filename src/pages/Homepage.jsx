@@ -10,6 +10,7 @@ const style = {
 
 function Homepage() {
   const { data, isLoading } = useQuery(["post-list"], getAllPosts);
+  // console.log({ data, isLoading });
 
   return (
     <>

@@ -17,7 +17,7 @@ function AddPost() {
     images: null,
   });
 
-  const { data } = useQuery(["get-categories"], getCategory);
+  const { data } = useQuery(["category"], getCategory);
 
   const addPostHandler = (event) => {
     event.preventDefault();
