@@ -10,14 +10,12 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
-  
+  transition: all 0.5s ease-in-out;
 }
 
 .menu div {
   padding: 20px;
   border-bottom: 1px solid rgb(234, 234, 234);
-
- 
 }
 
 .menu h3 {
@@ -28,7 +26,6 @@
 }
 .container {
   position: relative;
-  transition: all .5s ease-in-out;
 }
 
 .container button {
@@ -41,5 +38,4 @@
   font-size: 1rem;
   border: none;
   margin-left: 55px;
-  
 }

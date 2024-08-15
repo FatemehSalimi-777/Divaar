@@ -11,6 +11,20 @@ import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import styles from "./DropDown.module.css";
 
 function DropDown() {
+  const dropDownStyles = {
+    backgroundColor: "#fff",
+    position: "absolute",
+    top: "100%",
+    left: "0",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "grey",
+    borderRadius: "10px",
+    padding: "20px",
+    boxShadow: " rgba(149, 157, 165, 0.5) 0px 8px 24px",
+    transition: "all 0.5s ease-in-out",
+  };
   const [open, setOpen] = useState(false);
 
   const { refetch, data, error } = useQuery(["profile"], getProfile);
@@ -40,15 +54,13 @@ function DropDown() {
       {!open ? (
         <button onClick={openHandler}>
           {" "}
-          <AiOutlineCaretDown />
-          {" "}
+          <AiOutlineCaretDown />{" "}
           {data ? "دیوار من" : <Link to="/auth">وارد شوید</Link>}
         </button>
       ) : (
         <button onClick={openHandler}>
           {" "}
-          <AiOutlineCaretUp />
-          {" "}
+          <AiOutlineCaretUp />{" "}
           {data ? "دیوار من" : <Link to="/auth">وارد شوید</Link>}
         </button>
       )}
